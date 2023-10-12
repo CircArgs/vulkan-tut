@@ -13,6 +13,11 @@ namespace lve{
             LveWindow(int w, int h, std::string name);
             ~LveWindow();
 
+            LveWindow(const LveWindow &other) = delete;
+            LveWindow &operator=(const LveWindow &other) = delete;
+
+
+            bool shouldClose(){return glfwWindowShouldClose(window);}
         private:
             void initWindow();
 
@@ -21,5 +26,5 @@ namespace lve{
 
             std::string windowName;
             GLFWwindow *window;
-    }
+    };
 }

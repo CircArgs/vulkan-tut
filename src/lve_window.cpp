@@ -1,5 +1,3 @@
-#pragma once
-
 #include "lve_window.hpp"
 
 namespace lve{
